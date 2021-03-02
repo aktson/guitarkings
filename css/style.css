@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "boots";
+  src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+}
+h1,
+h2 {
+  font-family: "boots", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #202020;
+}
+.logo {
+  font-family: "boots", sans-serif;
+  text-decoration-line: none;
+  color: #fff;
+}
+
+nav li,
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-bottom: 5px;
+
+  color: #fff;
+}
+header {
+  background-color: #202020;
+}
+footer {
+  background-color: #202020;
+  color: #fff;
+  text-align: center;
+}
+.cta {
+  background-color: #bb0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+.sale {
+  background-color: #127300;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+.review {
+  background-color: #e8e8e8;
+  color: #fff;
+  padding: 5px;
+}
+.featured products {
+  background-color: #fbfbfb;
+}
