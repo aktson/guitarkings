@@ -7,11 +7,22 @@
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+p {
   font-family: "roboto", Verdana, Geneva, Tahoma, sans-serif;
+  color: #202020;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-}
 h1,
 h2 {
   font-family: "boots", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -21,27 +32,37 @@ h2 {
   font-family: "boots", sans-serif;
   text-decoration-line: none;
   color: #fff;
+  float: left;
+  padding: 5px 5x 5px 5px;
+  font-size: 1.5em;
+  margin-right: 30px;
 }
-
 nav li,
 nav a {
   display: inline-block;
   text-decoration: none;
-  padding-right: 10px;
-  padding-bottom: 5px;
-
+  padding: 5px;
   color: #fff;
+  font-size: 1em;
 }
+
 header {
   background-color: #202020;
+  padding: 10px;
 }
+.active {
+  text-decoration: underline;
+}
+
 footer {
   background-color: #202020;
-  color: #fff;
   text-align: center;
+  color: #e8e8e8;
+  max-height: 80px;
 }
 .cta {
   background-color: #bb0000;
+  border: none;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -49,16 +70,154 @@ footer {
 }
 .sale {
   background-color: #127300;
+  border: none;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
   padding: 5px;
 }
+
+/*homepage */
+.welcome {
+  background: url(../images/home-header.jpg) no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  background-position-x: right;
+  background-position-y: bottom;
+  padding: 50px 10px;
+}
+.container {
+  max-width: 600px;
+  text-align: center;
+}
+.cta-top {
+  background-color: #bb0000;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 80px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 10px auto;
+  max-width: 60%;
+  text-align: center;
+  padding: 30px;
+}
+.description-list {
+  text-align: left;
+  max-width: 100%;
+  padding-top: 30px;
+}
+.description li {
+  padding-top: 10px;
+  margin-left: 20px;
+}
+.description h2 {
+  padding-bottom: 20px;
+}
+
+.description img {
+  border-radius: 64px;
+  max-width: 400px;
+  margin-left: 50px;
+}
+
+.review img {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+}
 .review {
   background-color: #e8e8e8;
   color: #fff;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  max-width: 100%;
+  text-align: center;
 }
-.featured products {
+.review h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.featured {
   background-color: #fbfbfb;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.featured img {
+  max-width: 357px;
+  height: 238px;
+}
+
+/*contact page */
+.form {
+  width: 685px;
+  height: 396px;
+  padding: 20px;
+  color: #202020;
+  text-align: left;
+  position: relative;
+  margin: 100px auto;
+}
+.form h1 {
+  color: #202020;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 80%;
+  height: 50px;
+  border-radius: 8px;
+  margin: 10px 0px;
+  border: 1px solid #c4c4c4;
+  display: block;
+}
+
+.place-holder {
+  width: 80%;
+  height: 230px;
+  border-radius: 8px;
+  margin: 10px auto 10px auto;
+  border: 1px solid #c4c4c4;
+}
+.guitarpage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.guitarpage img {
+  width: 316px;
+  height: 210px;
+  padding: 10px 90px;
+}
+.allform {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 50px;
+  text-align: center;
+}
+.contactpage-cta {
+  width: 365px;
+  padding: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.message {
+  text-align: left;
+}
+.send {
+  text-align: center;
 }

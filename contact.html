@@ -8,26 +8,51 @@
       name="description"
       content="contact Guita kings for amazing products you'ill love"
     />
- 
     <title>Guitar Kings | contact</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-      
+    <header>
+      <a href="index.html" class="logo">Guitar Kings</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guitars.html">Guitars</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="contact.php" class="form">
+        <h1>Contact us</h1>
 
-  <header>
-    <a href="index.html">Guitar Kings | Contact</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guitars.html">Guitars</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <section>
-      <h1>Contact</h1>
-      
-  </header>
-  <footer>Copyright &copy;</footer>
-</body>
+        <div class="allform">
+          <div class="left">
+            <label for="name">Full name</label>
+            <input type="text" name="name" class="input" />
+            <label for="email">E-mail</label>
+            <input type="email" name="email" class="input" />
+            <label for="guitars">Guitar</label>
+            <select name="guitars" id="guitars" class="input">
+              <option value="adirondack-red">adirondack-red</option>
+              <option value="adirondack-blue">adirondack-blue</option>
+              <option value="adirondack-green">adirondack-green</option>
+            </select>
+
+            <input type="checkbox" id="email-updates" name="email-updates" />
+            <label for="e-mail-updates">Sign up for e-mail updates</label><br />
+          </div>
+
+          <div class="message">
+            <label for="textarea">Messages</label>
+            <input type="text" name="text" class="place-holder" />
+          </div>
+        </div>
+        <div class="send">
+          <input type="submit" value="Send now" class="cta contactpage-cta" />
+        </div>
+      </form>
+    </main>
+    <footer>Copyright &copy;</footer>
+  </body>
 </html>
