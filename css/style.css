@@ -17,22 +17,33 @@ p {
   color: #202020;
   box-sizing: border-box;
 }
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
+/* global  */
 h1,
 h2 {
   font-family: "boots", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #202020;
 }
+header {
+  background-color: #202020;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .logo {
   font-family: "boots", sans-serif;
   text-decoration-line: none;
   color: #fff;
-  float: left;
   padding: 5px 5x 5px 5px;
   font-size: 1.5em;
   margin-right: 30px;
@@ -45,20 +56,28 @@ nav a {
   color: #fff;
   font-size: 1em;
 }
-
-header {
-  background-color: #202020;
-  padding: 10px;
-}
 .active {
   text-decoration: underline;
+}
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: white;
+  display: none;
+}
+#hamburger-menu {
+  display: none;
+}
+#hamburger-menu:checked ~ nav {
+  display: block;
 }
 
 footer {
   background-color: #202020;
   text-align: center;
   color: #e8e8e8;
-  max-height: 80px;
+  padding: 10px;
 }
 .cta {
   background-color: #bb0000;
@@ -66,7 +85,8 @@ footer {
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  padding: 5px;
+  padding: 8px;
+  min-width: 51.2px;
 }
 .sale {
   background-color: #127300;
@@ -74,7 +94,8 @@ footer {
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  padding: 5px;
+  padding: 8px;
+  min-width: 51.2px;
 }
 
 /*homepage */
@@ -87,7 +108,8 @@ footer {
   padding: 50px 10px;
 }
 .container {
-  max-width: 600px;
+  position: absolute;
+  left: 100px;
   text-align: center;
 }
 .cta-top {
@@ -103,80 +125,141 @@ footer {
   margin-top: 10px;
 }
 .description {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 10px auto;
-  max-width: 60%;
-  text-align: center;
+  display: flex;
+  margin: auto;
   padding: 30px;
+  max-width: 1000px;
+  align-items: center;
 }
-.description-list {
-  text-align: left;
-  max-width: 100%;
-  padding-top: 30px;
-}
-.description li {
-  padding-top: 10px;
-  margin-left: 20px;
-}
-.description h2 {
-  padding-bottom: 20px;
+.description > * {
+  flex: 1;
 }
 
+.description-list ul {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.description h2 {
+  padding-bottom: 10px;
+}
 .description img {
   border-radius: 64px;
-  max-width: 400px;
-  margin-left: 50px;
-}
-
-.review img {
-  width: 104px;
-  height: 104px;
-  border-radius: 50%;
+  max-width: 450px;
 }
 .review {
   background-color: #e8e8e8;
   color: #fff;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 50px;
-  max-width: 100%;
-  text-align: center;
+  padding: 30px;
+  margin: auto;
 }
 .review h2 {
-  grid-column: 1 / -1;
   text-align: center;
-  padding-bottom: 30px;
+}
+.review-content {
+  display: flex;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  gap: 30px;
+}
+.review img {
+  width: 80px;
+  border-radius: 50%;
+}
+.review-1 figure,
+.review-2 figure {
+  justify-content: flex-end;
+}
+
+.review-1,
+.review-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+}
+.review-name {
+  content: "";
+  display: block;
 }
 
 .featured {
   background-color: #fbfbfb;
+  text-align: center;
+  padding: 30px;
+}
+
+.featured-products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 1000px;
+  padding-top: 20px;
+  margin: 0 auto;
 }
-.featured img {
-  max-width: 357px;
-  height: 238px;
+.featured-products h2 {
+  grid-column: 1 / -1;
+}
+.featured-products img {
+  width: 100%;
 }
 
-/*contact page */
-.form {
-  width: 685px;
-  height: 396px;
-  padding: 20px;
-  color: #202020;
-  text-align: left;
-  position: relative;
-  margin: 100px auto;
-}
-.form h1 {
-  color: #202020;
+/*guitas-page */
+.guitarpage {
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 30px;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.guitarpage h2 {
+  grid-column: 1 / -1;
+}
+.products img {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+.products .cta {
+  grid-row: 2 / 3;
+  text-align: center;
+}
+.products p {
+  grid-row: 3 / 4;
+  text-align: left;
+}
+.products h3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  text-align: left;
+}
+.
+/* contactpage*/
+
+.contact {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
 .input {
-  width: 80%;
+  width: 100%;
   height: 50px;
   border-radius: 8px;
   margin: 10px 0px;
@@ -185,39 +268,222 @@ footer {
 }
 
 .place-holder {
-  width: 80%;
-  height: 230px;
+  width: 100%;
+  height: 80%;
   border-radius: 8px;
   margin: 10px auto 10px auto;
   border: 1px solid #c4c4c4;
 }
-.guitarpage {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.guitarpage img {
-  width: 316px;
-  height: 210px;
-  padding: 10px 90px;
-}
-.allform {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 50px;
+.contact h1 {
+  grid-column: span 2;
   text-align: center;
 }
+
 .contactpage-cta {
-  width: 365px;
+  width: 20em;
   padding: 10px;
-  margin-top: 50px;
+  grid-column: 3 / 4;
   text-align: center;
 }
-.left {
+.form-left {
+  text-align: left;
+  width: 50%;
+  justify-self: right;
+}
+.form-right {
+  max-width: 50%;
   text-align: left;
 }
-.message {
-  text-align: left;
-}
-.send {
+.send-btn {
   text-align: center;
+  grid-column: span 2;
+}
+
+/*product page */
+
+.product-item {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 30px;
+  padding: 20px;
+}
+.product-item > * {
+  flex: 1;
+}
+.product-image_thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.product-item img {
+  width: 100%;
+}
+.product-details > * {
+  margin-bottom: 20px;
+}
+.product-details a {
+  margin: auto;
+  width: 245.61px;
+  display: block;
+}
+.price {
+  font-size: 1.3em;
+}
+/*media queries */
+
+/* moible mmedia queries */
+@media (max-width: 511px) {
+  .guitarpage {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .hamburger {
+    display: grid;
+  }
+  nav {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+  }
+  .description img {
+    width: 80%;
+  }
+  .featured-products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .product-image_thumbnails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .product-details {
+    text-align: center;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .form-left {
+    margin: inherit;
+  }
+  .form-right {
+    margin: inherit;
+    height: 100px;
+  }
+}
+/* tablet media queries */
+
+@media (min-width: 512px) and (max-width: 720px) {
+  .welcome {
+    background: url(../images/home-header.jpg) no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    background-position-x: right;
+    background-position-y: bottom;
+    padding: 50px 10px;
+  }
+
+  .cta-top {
+    padding: 10px 10px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+  }
+  .description img {
+    width: 80%;
+    
+  }
+  .featured-products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .guitarpage {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    text-align: center;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .product-image_thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .form-left {
+    margin: inherit;
+  }
+  .form-right {
+    margin: inherit;
+    height: 100px;
+    width: 100%;
+  }
+}
+}
+
+/* desktop mmedia queries */
+@media (min-width: 669px) and (max-width: 1024px) {
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .description img {
+    width: 80%;
+  }
 }

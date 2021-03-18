@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="contact Guita kings for amazing products you'ill love"
+      content="get real authentic, Hand-made guitars from Guitarkings"
     />
-    <title>Guitar Kings | contact</title>
     <link rel="stylesheet" href="css/style.css" />
+    <title>Guitar Kings | Contact us</title>
+
+    <script
+      src="https://kit.fontawesome.com/e9fca197f4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu" class="hamburger">
+        <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -22,12 +31,11 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <form action="contact.php" class="form">
-        <h1>Contact us</h1>
-
-        <div class="allform">
-          <div class="left">
+    <main class="contact">
+      <form action="contact.php">
+        <div class="contact-form">
+          <h1>Contact us</h1>
+          <section class="form-left">
             <label for="name">Full name</label>
             <input type="text" name="name" class="input" />
             <label for="email">E-mail</label>
@@ -38,18 +46,18 @@
               <option value="adirondack-blue">adirondack-blue</option>
               <option value="adirondack-green">adirondack-green</option>
             </select>
-
             <input type="checkbox" id="email-updates" name="email-updates" />
-            <label for="e-mail-updates">Sign up for e-mail updates</label><br />
-          </div>
-
-          <div class="message">
-            <label for="textarea">Messages</label>
+            <label for="e-mail-updates">Sign up for e-mail updates</label>
+            <br />
+          </section>
+          <section class="form-right">
+            <label for="place-holder">Messages</label>
             <input type="text" name="text" class="place-holder" />
-          </div>
-        </div>
-        <div class="send">
-          <input type="submit" value="Send now" class="cta contactpage-cta" />
+          </section>
+
+          <section class="send-btn">
+            <input type="submit" value="Send now" class="cta contactpage-cta" />
+          </section>
         </div>
       </form>
     </main>
