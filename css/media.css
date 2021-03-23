@@ -15,11 +15,13 @@
     display: flex;
     flex: 1;
     color: white;
+    justify-content: flex-end;
   }
 
   nav ul {
     display: flex;
     flex-direction: column;
+    display: inline-block;
   }
   .container {
     max-width: min-content;
