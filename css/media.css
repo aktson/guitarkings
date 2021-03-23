@@ -4,12 +4,19 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-  .hamburger {
-    display: grid;
-  }
   nav {
     display: none;
   }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+  .hamburger {
+    display: flex;
+    flex: 1;
+    color: white;
+  }
+
   nav ul {
     display: flex;
     flex-direction: column;
@@ -140,6 +147,10 @@
   }
   .form-right {
     height: 100px;
+  }
+  .product-specific {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
