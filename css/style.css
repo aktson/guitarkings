@@ -124,3 +124,7 @@ footer {
 .price {
   font-size: 1.3em;
 }
+.products .cta {
+  grid-row: 2 / 3;
+  text-align: center;
+}
