@@ -1,0 +1,51 @@
+/* contactpage*/
+
+.contact {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  margin: 10px 0px;
+  border: 1px solid #c4c4c4;
+  display: block;
+}
+
+.place-holder {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  margin: 10px auto 10px auto;
+  border: 1px solid #c4c4c4;
+}
+.contact h1 {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.contactpage-cta {
+  width: 20em;
+  padding: 10px;
+  grid-column: 3 / 4;
+  text-align: center;
+}
+.form-left,
+.form-right {
+  text-align: left;
+  max-width: 100%;
+}
+
+.send-btn {
+  text-align: center;
+  grid-column: span 2;
+}

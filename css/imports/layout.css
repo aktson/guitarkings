@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body,
+p {
+  color: #202020;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+header,
+footer {
+  background-color: #202020;
+  padding: 10px;
+}
+img {
+  width: 100%;
+}
