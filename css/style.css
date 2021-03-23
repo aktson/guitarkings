@@ -53,14 +53,16 @@ footer {
   color: #fff;
   border-radius: 8px;
   padding: 8px;
-  min-width: 51.2px;
+  width: 70px;
   position: relative;
   overflow: hidden;
 }
 .sale {
   background-color: #127300;
+  width: 70px;
 }
-.cta::before {
+.cta::before,
+.sale::before {
   content: "";
   height: 70px;
   background-color: white;
@@ -73,19 +75,7 @@ footer {
   opacity: 0.3;
   transition: 1s ease-in;
 }
-.sale:before {
-  content: "";
-  height: 80px;
-  background-color: white;
-  position: absolute;
-  padding: 10px;
-  top: -20px;
-  transform: rotate(45deg);
-  left: -50px;
-  overflow: hidden;
-  opacity: 0.1;
-  transition: 1s ease-in;
-}
+
 .cta:hover:before,
 .sale:hover:before {
   left: 130%;
