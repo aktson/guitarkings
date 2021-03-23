@@ -120,6 +120,7 @@ footer {
   margin: auto;
   width: 245.61px;
   display: block;
+  text-align: center;
 }
 .price {
   font-size: 1.3em;
