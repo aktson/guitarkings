@@ -10,3 +10,25 @@ hamburger.onclick = function expandNav () {
 
 ;
 }
+
+
+window.addEventListener("scroll", () => {
+    const description = document.querySelector(".description");
+    const reviews = document.querySelector(".review");
+    
+    if (window.scrollY >= 400) {
+        description.classList.add("active-two");
+    }
+    else {
+        description.classList.remove("active-two");
+     }
+    if (window.scrollY >= 600) {
+     
+        reviews.classList.add ("active-three");
+    }
+    else {
+           reviews.classList.remove ("active-three");
+    }
+
+})
+

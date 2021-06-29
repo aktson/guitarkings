@@ -42,10 +42,17 @@
 }
 .description {
   display: flex;
-  margin: auto;
+  margin: 100px auto;
   padding: 30px;
   max-width: 1000px;
   align-items: center;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: all 0.5s linear;
+}
+.active-two {
+  opacity: 1;
+  transform: translateX(0px);
 }
 .description > * {
   flex: 1;
@@ -68,7 +75,12 @@
   background-color: #e8e8e8;
   color: #fff;
   padding: 30px;
-  margin: auto;
+  margin: 100px auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.active-three {
+  opacity: 1;
 }
 .review h2 {
   text-align: center;

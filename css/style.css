@@ -32,6 +32,10 @@ nav a {
 .active {
   text-decoration: underline;
 }
+.active-two {
+  opacity: 1;
+  transform: scale(1);
+}
 .hamburger {
   display: none;
   margin-top: 10px;
